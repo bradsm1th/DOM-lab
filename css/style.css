@@ -1,0 +1,8 @@
+:root {
+  font-family: 'gill sans', sans-serif;
+}
+
+h1 {
+  border-block-end: .1em solid cadetblue;
+  padding-block-end: .2em;
+}
