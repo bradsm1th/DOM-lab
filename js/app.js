@@ -38,3 +38,22 @@ commentEls.forEach((li, idx) => {
 commentEls.forEach(li => {
   li.style.fontSize = '2em';
 })
+
+// jim's 'random RGB' puzzler
+function randomRGB() {
+  const r = Math.floor(Math.random() * 256);
+  const g = Math.floor(Math.random() * 256);
+  const b = Math.floor(Math.random() * 256);
+  
+  return `rgb(${r},${g},${b})`;
+}
+
+// console.log(randomRGB());
+
+document.querySelector('body').addEventListener('click', () => {
+  document.querySelector('body').style.backgroundColor = randomRGB();
+})
+
+
+
+
