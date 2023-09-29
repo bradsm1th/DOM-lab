@@ -44,6 +44,6 @@ menuLinks.forEach(menuItem => {
   newEl.innerText = menuItem.text;
   // newEl.textContent = menuItem.text;
   // newEl.innerHTML = menuItem.text;
-  console.log(newEl);
+  // console.log(newEl);
 topMenuEl.append(newEl);
 });
