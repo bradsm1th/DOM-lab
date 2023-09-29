@@ -3,9 +3,20 @@ console.log("Hello from the DOM lab!");
 // Menu data structure (Task 3.0);
 const menuLinks = [
   {text: 'about', href: '/about'},
-  {text: 'catalog', href: '/catalog'},
-  {text: 'orders', href: '/orders'},
-  {text: 'account', href: '/account'},
+  {text: 'catalog', href: '#', subLinks: [
+    {text: 'all', href: '/catalog/all'},
+    {text: 'top selling', href: '/catalog/top'},
+    {text: 'search', href: '/catalog/search'},
+  ]},
+  {text: 'orders', href: '#' , subLinks: [
+    {text: 'new', href: '/orders/new'},
+    {text: 'pending', href: '/orders/pending'},
+    {text: 'history', href: '/orders/history'},
+  ]},
+  {text: 'account', href: '#', subLinks: [
+    {text: 'profile', href: '/account/profile'},
+    {text: 'sign out', href: '/account/signout'},
+  ]},
 ];
 
 // Task 1.0
@@ -74,6 +85,12 @@ subMenuEl.style.setProperty('position', 'absolute');
 
 // 4.5
 subMenuEl.style.setProperty('top', '0');
+
+
+
+// 5.0
+// [done in line 4]
+
 
 // running/temp console check
 console.log(subMenuEl.style.position);
