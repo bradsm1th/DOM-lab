@@ -19,6 +19,9 @@ const menuLinks = [
   ]},
 ];
 
+// …part of 5.1 (global variable)
+const showingSubMenu = false;
+
 // Task 1.0
 const mainEl = document.querySelector('main');
 
@@ -91,6 +94,9 @@ subMenuEl.style.setProperty('top', '0');
 // 5.0
 // [done in line 4]
 
+// 5.1 [partial...the global variable is up top]
+const topMenuLinks = document.querySelectorAll('#top-menu a');
+
 
 // running/temp console check
-console.log(subMenuEl.style.position);
+console.log(topMenuLinks);
