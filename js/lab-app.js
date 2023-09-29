@@ -106,6 +106,15 @@ topMenuEl.addEventListener('click', e => {
   // console.log(e.target.outerText);
   // console.log(e.target.innerHTML);
   // console.log(e.target.outerHTML);
+
+// 5.3 (part of event listener)
+  if (e.target.classList.contains('active')) {
+    e.target.classList.remove('active');
+    showingSubMenu = false;
+    subMenuEl.style.setProperty('top', '0');
+    return;
+  }
+
 })
 
 
