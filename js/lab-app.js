@@ -115,6 +115,11 @@ topMenuEl.addEventListener('click', e => {
     return;
   }
 
+  // 5.4 (part of event listener)
+  topMenuLinks.forEach(anchorEl => {
+    anchorEl.classList.remove('active');
+    console.log(anchorEl.classList);
+  })
 })
 
 
