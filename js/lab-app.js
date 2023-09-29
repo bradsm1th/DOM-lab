@@ -57,7 +57,9 @@ topMenuEl.append(newEl);
 const subMenuEl = document.querySelector('#sub-menu');
 
 // 4.1
-subMenuEl.style.height = '100%';
+// subMenuEl.style.height = '100%';
+// OR
+subMenuEl.style.setProperty('height', '100%');
 // console.log(subMenuEl.getAttribute('height'));
 
 // 4.2
