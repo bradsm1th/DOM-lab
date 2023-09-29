@@ -1,11 +1,6 @@
 :root {
   font-family: 'gill sans', sans-serif;
 }
-
-body {
-  border: 2em solid yellow;
-}
-
 h1 {
   text-align: center;
   border-block-end: .1em solid cadetblue;
