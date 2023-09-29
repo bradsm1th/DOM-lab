@@ -97,6 +97,16 @@ subMenuEl.style.setProperty('top', '0');
 // 5.1 [partial...the global variable is up top]
 const topMenuLinks = document.querySelectorAll('#top-menu a');
 
+// 5.2
+topMenuEl.addEventListener('click', e => {
+  e.preventDefault();
+  if (e.target.tagName !== 'A') { return };
+  console.log(e.target.textContent);
+  // console.log(e.target.innerText);
+  // console.log(e.target.outerText);
+  // console.log(e.target.innerHTML);
+  // console.log(e.target.outerHTML);
+})
+
 
 // running/temp console check
-console.log(topMenuLinks);
