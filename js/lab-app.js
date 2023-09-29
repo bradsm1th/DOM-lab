@@ -65,3 +65,6 @@ subMenuEl.style.setProperty('height', '100%');
 // 4.2
 subMenuEl.style.backgroundColor = 'var(--sub-menu-bg)';
 // console.log(subMenuEl.getAttribute('style'));
+
+// 4.3
+subMenuEl.classList.add('flex-around');
