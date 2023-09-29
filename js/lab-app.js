@@ -72,5 +72,8 @@ subMenuEl.classList.add('flex-around');
 // 4.4
 subMenuEl.style.setProperty('position', 'absolute');
 
+// 4.5
+subMenuEl.style.setProperty('top', '0');
+
 // running/temp console check
 console.log(subMenuEl.style.position);
