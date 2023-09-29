@@ -22,6 +22,8 @@ mainEl.classList.add('flex-ctr');
 // or
 // mainEl.setAttribute('class', 'flex-ctr');
 
+
+
 // Task 2.0
 const topMenuEl = document.querySelector('#top-menu');
 
@@ -37,6 +39,7 @@ topMenuEl.style.backgroundColor = 'var(--top-menu-bg)'
 topMenuEl.classList.add('flex-around');
 
 
+
 // Task 3.1
 menuLinks.forEach(menuItem => {
   let newEl = document.createElement('a');
@@ -47,3 +50,8 @@ menuLinks.forEach(menuItem => {
   // console.log(newEl);
 topMenuEl.append(newEl);
 });
+
+
+
+// Task 4.0
+const subMenuEl = document.querySelector('#sub-menu');
