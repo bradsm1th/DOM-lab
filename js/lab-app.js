@@ -2,21 +2,27 @@ console.log("Hello from the DOM lab!");
 
 // Menu data structure (Task 3.0);
 const menuLinks = [
-  {text: 'about', href: '/about'},
-  {text: 'catalog', href: '#', subLinks: [
-    {text: 'all', href: '/catalog/all'},
-    {text: 'top selling', href: '/catalog/top'},
-    {text: 'search', href: '/catalog/search'},
-  ]},
-  {text: 'orders', href: '#' , subLinks: [
-    {text: 'new', href: '/orders/new'},
-    {text: 'pending', href: '/orders/pending'},
-    {text: 'history', href: '/orders/history'},
-  ]},
-  {text: 'account', href: '#', subLinks: [
-    {text: 'profile', href: '/account/profile'},
-    {text: 'sign out', href: '/account/signout'},
-  ]},
+  { text: 'about', href: '/about' },
+  {
+    text: 'catalog', href: '#', subLinks: [
+      { text: 'all', href: '/catalog/all' },
+      { text: 'top selling', href: '/catalog/top' },
+      { text: 'search', href: '/catalog/search' },
+    ]
+  },
+  {
+    text: 'orders', href: '#', subLinks: [
+      { text: 'new', href: '/orders/new' },
+      { text: 'pending', href: '/orders/pending' },
+      { text: 'history', href: '/orders/history' },
+    ]
+  },
+  {
+    text: 'account', href: '#', subLinks: [
+      { text: 'profile', href: '/account/profile' },
+      { text: 'sign out', href: '/account/signout' },
+    ]
+  },
 ];
 
 // …part of 5.1 (global variable)
@@ -62,7 +68,7 @@ menuLinks.forEach(menuItem => {
   // newEl.textContent = menuItem.text;
   // newEl.innerHTML = menuItem.text;
   // console.log(newEl);
-topMenuEl.append(newEl);
+  topMenuEl.append(newEl);
 });
 
 
@@ -107,7 +113,7 @@ topMenuEl.addEventListener('click', e => {
   // console.log(e.target.innerHTML);
   // console.log(e.target.outerHTML);
 
-// 5.3 (part of event listener)
+  // 5.3 (part of event listener)
   if (e.target.classList.contains('active')) {
     e.target.classList.remove('active');
     showingSubMenu = false;
@@ -118,9 +124,9 @@ topMenuEl.addEventListener('click', e => {
   // 5.4 (part of event listener)
   topMenuLinks.forEach(anchorEl => {
     anchorEl.classList.remove('active');
-    console.log(anchorEl.classList);
   })
+
+  // 5.5 (part of event listener)
+  e.target.classList.add('active');
+
 })
-
-
-// running/temp console check
