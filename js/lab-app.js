@@ -135,10 +135,16 @@ topMenuEl.addEventListener('click', e => {
   // console.log(menuLinks[2].text);
 
   const theLink = menuLinks.find(el => el.text === thatHref);
+  console.log(theLink);
   if (theLink.subLinks) {
     showingSubMenu = true;
+    // 5.7
+    buildSubMenu(theLink.subLinks);
+    subMenuEl.style.setProperty('top', '100%');
   } else {
     showingSubMenu = false;
+    subMenuEl.style.setProperty('top', '0');
+    mainEl.innerHTML = "<h1>about</h1>";
   }
 
 })
