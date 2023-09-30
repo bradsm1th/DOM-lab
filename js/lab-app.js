@@ -160,3 +160,12 @@ topMenuEl.addEventListener('click', e => {
   }
 
 })
+
+// 6.0
+subMenuEl.addEventListener('click', (e) => {
+  e.preventDefault();
+  if (e.target.tagName !== "A") { 
+    return 
+  };
+  console.log(e.target.innerHTML);
+})
