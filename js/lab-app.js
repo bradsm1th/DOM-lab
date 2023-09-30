@@ -147,4 +147,16 @@ topMenuEl.addEventListener('click', e => {
     mainEl.innerHTML = "<h1>about</h1>";
   }
 
+  // 5.8 still part of event listener
+  function buildSubMenu(array) {
+    subMenuEl.innerHTML = '';
+    array.forEach(link => {
+      const anchorEl = document.createElement('a');
+      anchorEl.setAttribute('href', link.href);
+      anchorEl.innerHTML = link.text;
+      subMenuEl.appendChild(anchorEl);
+      // console.log(link.href);
+    })
+  }
+
 })
