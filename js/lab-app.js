@@ -178,4 +178,7 @@ subMenuEl.addEventListener('click', (e) => {
     link.classList.remove('active');
   })
 
+  // 6.3
+  console.log(mainEl);
+  mainEl.innerHTML = `<h1>${e.target.innerHTML}</h1>`;
 })
