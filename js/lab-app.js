@@ -26,7 +26,7 @@ const menuLinks = [
 ];
 
 // …part of 5.1 (global variable)
-const showingSubMenu = false;
+let showingSubMenu = false;
 
 // Task 1.0
 const mainEl = document.querySelector('main');
@@ -107,7 +107,7 @@ const topMenuLinks = document.querySelectorAll('#top-menu a');
 topMenuEl.addEventListener('click', e => {
   e.preventDefault();
   if (e.target.tagName !== 'A') { return };
-  console.log(e.target.textContent);
+  // console.log(e.target.textContent);
   // console.log(e.target.innerText);
   // console.log(e.target.outerText);
   // console.log(e.target.innerHTML);
@@ -128,5 +128,17 @@ topMenuEl.addEventListener('click', e => {
 
   // 5.5 (part of event listener)
   e.target.classList.add('active');
+
+  // 5.6 (part of event listener)
+  const thatHref = e.target.innerHTML;
+  // console.log(thatHref);
+  // console.log(menuLinks[2].text);
+
+  const theLink = menuLinks.find(el => el.text === thatHref);
+  if (theLink.subLinks) {
+    showingSubMenu = true;
+  } else {
+    showingSubMenu = false;
+  }
 
 })
