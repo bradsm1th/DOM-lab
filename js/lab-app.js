@@ -165,7 +165,10 @@ topMenuEl.addEventListener('click', e => {
 subMenuEl.addEventListener('click', (e) => {
   e.preventDefault();
   if (e.target.tagName !== "A") { 
-    return 
-  };
-  console.log(e.target.innerHTML);
+    return;
+  }
+  showingSubMenu = false;
+  subMenuEl.style.setProperty('top', '0');
+
+  console.log(subMenuEl.style);
 })
