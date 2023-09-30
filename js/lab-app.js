@@ -167,8 +167,15 @@ subMenuEl.addEventListener('click', (e) => {
   if (e.target.tagName !== "A") { 
     return;
   }
+  console.log(subMenuEl.style);
+
+  // 6.1
   showingSubMenu = false;
   subMenuEl.style.setProperty('top', '0');
 
-  console.log(subMenuEl.style);
+  // 6.2
+  topMenuLinks.forEach(link => {
+    link.classList.remove('active');
+  })
+
 })
