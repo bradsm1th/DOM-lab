@@ -3,6 +3,8 @@ console.log("Hello from the DOM lab!");
 // Menu data structure (Task 3.0);
 const menuLinks = [
   { text: 'about', href: '/about' },
+  { text: 'coffee', href: '/coffee' },
+  { text: 'mondays', href: '/mondays' },
   {
     text: 'catalog', href: '#', subLinks: [
       { text: 'all', href: '/catalog/all' },
@@ -144,22 +146,23 @@ topMenuEl.addEventListener('click', e => {
   } else {
     showingSubMenu = false;
     subMenuEl.style.setProperty('top', '0');
-    mainEl.innerHTML = "<h1>about</h1>";
+    mainEl.innerHTML = `<h1>${theLink.text}</h1>`;
   }
 
-  // 5.8 still part of event listener
-  function buildSubMenu(array) {
-    subMenuEl.innerHTML = '';
-    array.forEach(link => {
-      const anchorEl = document.createElement('a');
-      anchorEl.setAttribute('href', link.href);
-      anchorEl.innerHTML = link.text;
-      subMenuEl.appendChild(anchorEl);
-      // console.log(link.href);
-    })
-  }
-
+  
 })
+
+// 5.8
+function buildSubMenu(array) {
+  subMenuEl.innerHTML = '';
+  array.forEach(link => {
+    const anchorEl = document.createElement('a');
+    anchorEl.setAttribute('href', link.href);
+    anchorEl.innerHTML = link.text;
+    subMenuEl.appendChild(anchorEl);
+    // console.log(link.href);
+  })
+}
 
 // 6.0
 subMenuEl.addEventListener('click', (e) => {
